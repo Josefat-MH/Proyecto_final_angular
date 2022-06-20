@@ -1,0 +1,13 @@
+<div class="contact_form">
+    <div class="formulario">  
+      <h1>Formulario de contacto</h1>
+        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+          <form [formGroup]="datos" id="formu">  
+            <input type="text" class="form-control" placeholder="Name" formControlName="name"><br> 
+            <input type="text" class="form-control" placeholder="Asunto" formControlName="asunto"><br>
+            <input type="email" class="form-control" placeholder="Mail" formControlName="mail"><br>
+            <textarea name="message" class="form-control" placeholder="Mensaje" formControlName="message"></textarea>
+            <button class="btn btn-prmary" (click)="enviocorreo()">Enviar</button>
+            </form>
+    </div>  
+</div>

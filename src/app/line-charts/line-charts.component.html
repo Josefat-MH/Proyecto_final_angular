@@ -1,0 +1,26 @@
+<div class="container mt-5 pt-5">
+    <div class="col-12">
+            <div class="row">
+
+            <div clas="col-5 pl-5 mt-5">
+            <h1>MARCA'S COSMETICOS</h1>
+            <br>
+            <h3>POPULARIDAD SEMANAL EN VENTAS  </h3>
+            <br>
+            <button class="btn btn-outline-primary" (click)="grafico()">Mostrar</button>
+            </div>
+
+            <div class="col-7">
+                <div class="chart-wrapper">
+                    <canvas baseChart
+                    [datasets]="lineChartData"
+                    [labels]="lineChartLabels"
+                    [options]="lineChartOptions"
+                    [plugins]= "lineChartPlugins"
+                    ></canvas>
+                </div>
+
+            </div>
+            </div>
+    </div>
+</div>

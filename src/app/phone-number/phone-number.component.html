@@ -1,0 +1,15 @@
+<div class="contain">
+    <div class="row d-flex align-items-center justify-content-center">
+      
+      <form class="col-md-6">
+        <div class="card px-5 py-5">
+          <h1 class="text-center">Login Con Telefono</h1>
+          <div class="form-input">
+            <input type="text" name="phoneNumber" placeholder="Phone Number" class="form-control"
+              placeholder="Ingresa tu Numero Telfonico" [(ngModel)]="phoneNumber" min="10" max="15">
+          </div>
+          <button class="btn btn-info mt-4 signup" (click)="getOTP()">Generar Codigo</button>
+          <div id="sign-in-button"></div>
+        </div>
+      </form>
+    </div>

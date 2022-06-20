@@ -1,0 +1,39 @@
+<div class="parent-wrapper">
+    <span class="close-btn glyphicon glyphicon-remove"></span>
+    <div class="subscribe-wrapper">
+      <h4>REGISTRO</h4>
+      
+      <form [formGroup]="signUpForm" class="form"  (ngSubmit)="submit()">
+        <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input class="subscribe-input" type="text" class="form-control" formControlName="name">
+          <p *ngIf="name?.errors?.['required']"> (El nombre es Obligatorio)</p>
+          
+      </div>
+        <div class="mb-3">
+            <label class="form-label">Correo</label>
+            <input class="subscribe-input" type="text" class="form-control" formControlName="email">
+            <p *ngIf="email?.errors?.['required']"> (El email es Obligatorio)</p>
+            <p *ngIf="email?.errors?.['email']"> (El email debe ser valido)</p>
+            
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Contraseña </label>
+            <input class="subscribe-input" [(ngModel)]="password1" type="password" class="form-control" formControlName="password">
+            <p *ngIf="password?.errors?.['required']"> (contraseña requerida al menos 6 caracteres)</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Confirma Contraseña</label>
+          <input class="subscribe-input" [(ngModel)]="password2" type="password2" class="form-control" formControlName="password2">
+          <p *ngIf="passwords2?.errors?.['required']"> (contraseña requerida al menos 6 caracteres)</p>
+      </div>
+       
+      <button type="button" id="submit" type="submit" class="btn btn-info btn-lg btn-block">Registrar</button>
+      <button type="button" routerLink="/inicio"  class="btn btn-danger btn-lg btn-block">Cancelar</button>
+      
+    </form>
+      
+      
+    </div>
+      </div>
+

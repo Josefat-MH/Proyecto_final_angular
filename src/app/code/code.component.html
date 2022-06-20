@@ -1,0 +1,13 @@
+<div class="card text-center">
+  <div class="card-header bg-info">
+    Ingresa el codigo 
+  </div>
+  <div class="card-body">
+    <div class="otp">
+      <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+      <button class="btn btn-success mt-4 signup" (click)="handleClick()">Verificar Codigo</button>
+    </div>
+  </div>
+  
+</div>
+

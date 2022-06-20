@@ -1,0 +1,64 @@
+<!--<div class="page">
+  <div class="container">
+    <div class="left">
+      <div class="login">Login</div>
+      
+    </div>
+    <div class="right">
+      <div class="eula">Armate de color </div>
+      <form [formGroup]="loginForm" class="form" >
+          <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="text" class="form-control" formControlName="email">
+              
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password">
+          </div>
+          <div class="btn-group-vertical">
+            <button (click)="submit()" type="submit" id="submit" class="btn btn-danger btn-lg btn-block"> <img src="../../assets/img/login.png" alt="">Login</button>
+            <button id="submit"  class="btn btn-success" (click)="onClick()"> <img src="../../assets/img/google.png" alt="">Login con Google </button>
+            <button id="submit"  class="btn btn-warning" (click)="onClick2()"> <img src="../../assets/img/phone.png" alt="">Login con phone </button>
+            <span >Nuevo en la Plataforma ? <b> <a class="sign-up-link" routerLink="/registrar">Registrate!</a></b></span>
+            
+          </div>
+          <a class="C1" type="submit" value="cancelar" routerLink="/inicio">CANCELAR</a> 
+      </form>
+      
+    </div>
+  </div>
+</div>-->
+<div class="card bg-info mb-3" style="max-width: 600px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="https://thumbs.dreamstime.com/b/fotograf%C3%ADa-de-una-joven-guapa-morena-con-maquillaje-profesional-manos-doradas-moda-pintalabios-desnudos-y-cabello-natural-retrato-171150242.jpg" alt="..." class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-center">Armate de color</h5>
+        
+      <form [formGroup]="loginForm" class="form" >
+          <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="text" class="form-control" formControlName="email">
+              
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password">
+          </div>
+         
+            <button (click)="submit()" type="submit" id="submit" class="btn btn-danger btn-lg btn-block"> <img src="../../assets/img/login.png" alt="">Login</button>
+            <button id="submit"  class="btn btn-success btn-lg btn-block" (click)="onClick()"> <img src="../../assets/img/google.png" alt="">Login con Google </button>
+            <button id="submit"  class="btn btn-warning btn-lg btn-block" (click)="onClick2()"> <img src="../../assets/img/phone.png" alt="">Login con phone </button>
+            <br>
+            <span >Nuevo en la Plataforma ? <b> <a class="sign-up-link" routerLink="/registrar">Registrate!</a></b></span>
+            
+          <br>
+          <br>
+          <a class="C1" type="submit" value="cancelar" routerLink="/inicio">CANCELAR</a> 
+      </form>
+    </div>
+  </div>
+</div>

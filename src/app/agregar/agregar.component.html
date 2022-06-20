@@ -1,0 +1,115 @@
+<ul class="nav justify-content-end">
+  
+    <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
+      <li class="nav-item">
+        <a class="nav-link " (click)="logout()">Logout</a>
+      </li>
+    </ng-container>
+    <ng-template #loginButton>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="login">Login</a>
+      </li>
+    </ng-template>
+   
+  </ul>
+<!--<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+           <div class="div" *ngIf="!datosSub">
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" [(ngModel)]="alta.nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripcion:</label>
+                <input type="text" name="descripcion" class="form-control" [(ngModel)]="alta.descripcion">
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="text" name="precio" class="form-control" [(ngModel)]="alta.precio">
+            </div>
+
+            <div class="form-group">
+                <label for="cantida">Cantidad:</label>
+                <input type="text" name="cantida" class="form-control" [(ngModel)]="alta.cantida">
+            </div>
+
+           </div>
+
+           <button class="btn btn-success" (click)="guardarAltas()">Enviar</button>
+        </div>
+
+        <div *ngIf="datosSub">
+
+            <h4>Los Datos fueron creados con exito</h4>
+            <button class="btn btn-primary" (click)="nuevaAlta()">Nueva Alta</button>
+        </div>
+    </div>
+</div>-->
+<div class="div" *ngIf="!submitted">
+<div class="B1">
+  <h1>Alta Producto</h1>
+  
+
+  <div id="sendmessage"> </div>
+
+
+  
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input  type="text" class="form-control" [(ngModel)]="alta.nombre">
+  </div>
+
+  <div class="form-group">
+      <label for="descripcion">Marca:</label>
+      <input type="text" name="descripcion" class="form-control" [(ngModel)]="alta.descripcion">
+  </div>
+            
+ 	
+
+
+
+
+
+
+	
+  <div class="form-group">
+    <label for="cantida">Precio:</label>
+    <br>
+    <input type="text" name="precio" class="form-control" [(ngModel)]="alta.precio">
+</div>
+
+<div class="form-group">
+    <label for="cantida">Cantidad:</label>
+    <input type="text" name="cantida" class="form-control" [(ngModel)]="alta.cantida">
+</div>
+
+  
+<div class="form-group">
+  <label for="linea">Linea:</label>
+  <input type="text" name="linea" class="form-control" [(ngModel)]="alta.linea">
+</div>
+
+<br> <br> <br>
+<button class="bouton-contact" (click)="guardar()" >Guardar</button>
+</div>
+
+</div>	
+
+<div *ngIf="submitted">
+
+  
+  <div class="card text-center">
+    <div class="card-header bg-info">
+      Los Datos para el producto {{alta.nombre}} fueron creados con exito
+    </div>
+    <div class="card-body">
+      <button type="button" (click)="nuevaAlta()" class="btn btn-success">Nuevo Registro</button>
+        <button type="button" routerLink="/listas" class="btn btn-success">Inventario</button>
+    </div>
+  </div>
+  
+</div>

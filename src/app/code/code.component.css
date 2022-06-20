@@ -1,0 +1,22 @@
+.otp{
+  
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+  }
+  .card{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    
+  }
+  .card-body{
+    background-image: url(https://previews.123rf.com/images/captainvector/captainvector1705/captainvector170513153/79132424-dise%C3%B1o-de-fondo-azteca.jpg);
+
+  }
+  .card-header{
+    font-family: fantasy;
+    font-size: 30px;
+    color: rgb(241, 4, 134);
+  }

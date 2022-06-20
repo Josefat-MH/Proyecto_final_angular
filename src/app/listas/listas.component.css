@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+table {
+    width: 70%;
+    border-spacing: 0;
+    border-radius: 1em;
+    overflow: hidden;
+    margin:auto;
+  }
+  h2 {
+    text-align:center; 
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 3px rgb(20, 102, 98);
+    margin:50px 0px 0px 0px
+  }
+  .n1{
+      text-align: center;
+      color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 3px rgb(20, 102, 98);
+  }
+  thead{
+    background-color: rgb(53, 10, 12);
+    color:white;
+    text-align: center;
+}
+.wh{
+    background-color: white;
+    font-size: 20px;
+    text-align: center;
+    color:brown;
+}
+.table-success, .table-danger{
+    
+    font-size: 20px;
+    text-align: center;
+    color:brown;
+}
+.list {
+  text-align: left;
+  max-width: 750px;
+  margin: auto;
+}
+.btn{
+  margin: 0px 70px;/* dar espacio entre botones */
+  font-family:monospace;
+  color: white;
+  
+}
+#btn2{
+  margin: 0px 20px
+}
+.btn-group{
+  margin: 10px ;
+}
+.he{
+  font-family: 'Rubik Bubbles', cursive;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: rgb(216, 97, 0);
+  font-size: 40px;
+  text-align: center;
+  background: rgb(17, 129, 204);
+}
+#ex1{
+  background: rgb(168, 3, 58);
+}
+.he2{
+    
+  font-family: 'Rubik Bubbles', cursive;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: rgb(0, 235, 117);
+  font-size: 40px;
+  text-align: center;
+}
+#ex3{
+  background: rgb(168, 28, 3);
+}
+.he3{
+    
+  font-family: 'Rubik Bubbles', cursive;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: rgb(0, 188, 235);
+  font-size: 40px;
+  text-align: center;
+}
+#lis, .mt-0{
+  font-family: 'Reenie Beanie', cursive;
+  color: white;
+
+}
+#lis{
+  font-size: 30px;
+}
+#ex4{
+  background: rgb(3, 168, 53);
+}
+.he4{
+    
+  font-family: 'Rubik Bubbles', cursive;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: rgb(235, 67, 0);
+  font-size: 40px;
+  text-align: center;
+}
+
+.l1{
+  font-family: 'Rubik Bubbles', cursive;
+  font-size: 20px;
+  color: crimson;
+}

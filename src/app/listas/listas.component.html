@@ -1,0 +1,190 @@
+
+
+
+<h2>
+    Listado de productos 
+  </h2>
+  
+   
+   <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th >Nombre</th>
+            <th>Marca </th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Linea</th>
+        
+          </tr>
+        </thead>
+        <tbody>
+        <tr  *ngFor="let alt of altas; let i= index" 
+        [class.active]="i==altaIndex"
+        (click)="configuAltas(alt,i)"> 
+          <td class="wh"> {{alt.nombre}}</td>
+          <td class="table-success"> {{alt.descripcion}}</td>
+          <td class="wh">{{alt.precio}}</td>
+          <td class="table-danger"> {{alt.cantida}}</td>
+          <td class="wh">{{alt.linea}}</td>
+         
+        </tr>
+      </tbody>
+      <button class="btn btn-danger" (click)="eliminarTodo()">Borra Todo</button>
+      </table>
+      <div class="col-md"  *ngIf="altaDeAl">
+        <app-altas 
+        (refrescarAltas)=" refrescarAltas()" 
+        [tutorial]="altaDeAl">
+         
+        </app-altas>
+    </div> 
+
+   <div class="col"  *ngIf="!altaDeAl">
+       
+   </div>
+
+   <button type="button" class="btn btn-success  btn-lg" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Precios de Productos </button>
+  <button type="button" class="btn btn-danger  btn-lg" data-toggle="modal" data-target="#exampleModal2" data-whatever="@fat">Productos de la marca Mac </button>
+  <button type="button" class="btn btn-info  btn-lg" data-toggle="modal" data-target="#exampleModal3" data-whatever="@getbootstrap">Productos de Rostro</button>
+  <button type="button" class="btn btn-dark  btn-lg" data-toggle="modal" data-target="#exampleModal4" data-whatever="@getbootstrap">Informacion </button>
+     
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="he">Precios delos Productos  </p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="ex1">
+          <!-- Example single danger button -->
+  <div class="btn-group" *ngFor="let alt of altas; let i= index" 
+  [class.active]="i==altaIndex"
+  (click)="configuAltas(alt,i)">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+      {{alt.nombre}}
+    </button>
+    <div class="dropdown-menu">
+      <p class="dropdown-item" >{{alt.precio}}</p>
+    </div>
+  </div>
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="he2">Productos de la marca Mac</p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="ex2">
+          <!-- Example single danger button -->
+          <div class="accordion" id="accordionExample">
+            <div class="card" *ngFor="let alt of altas; let i= index" 
+            [class.active]="i==altaIndex"
+            (click)="configuAltas(alt,i)">
+              <div class="card-header" id="headingTwo" style="background: rgb(86, 4, 102);" *ngIf="alt.descripcion=='Mac'">
+                <h2 class="mb-0">
+                  <button id="nom" class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
+                    {{alt.nombre}} 
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body"  style="background: rgb(8, 173, 132);">
+                  
+                    <div class="media-body"  *ngIf="alt.descripcion=='Mac'">
+                      <h2 class="mt-0">Piezas</h2>
+                      <p id="lis">{{alt.cantida}}</p>
+                     
+                    </div>
+                  
+                </div>
+              </div>
+            
+  
+          </div>
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="he3">Productos para el rostro    </p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="ex3">
+          <!-- Example single danger button -->
+          <p>
+            <a  id ="btn2" class="btn btn-warning" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Rostro</a>
+      
+          </p>
+          <div class="row" *ngFor="let alt of altas; let i= index" 
+          [class.active]="i==altaIndex"
+          (click)="configuAltas(alt,i)">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body" *ngIf="alt.linea=='rostro'||alt.linea=='rostro'">
+                  {{alt.nombre}} , {{alt.descripcion}}, {{alt.precio}}
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="he4">Informacion de los productos  </p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="ex4">
+          <!-- Example single danger button -->
+          <div class="media" *ngFor="let alt of altas; let i= index" 
+          [class.active]="i==altaIndex"
+          (click)="configuAltas(alt,i)">
+    
+            <div class="media-body">
+              <h5 class="mt-0">{{alt.nombre}}</h5>
+              <p class="l1">{{alt.descripcion}}</p>
+              <p class="l1">{{alt.precio}}</p>
+              <p class="l1">{{alt.cantida}}</p>
+              <p class="l1">{{alt.linea}}</p>
+            </div>
+          </div>
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>

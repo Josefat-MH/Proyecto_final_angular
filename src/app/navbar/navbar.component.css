@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+.navbar-brand{
+    font-family: 'Dancing Script', cursive;
+    -webkit-text-stroke: 2px rgb(239, 240, 233);
+    color: rgb(223, 208, 1);
+    
+    font-size: 30px;
+}
+.nav-link{
+    
+    font-family: 'Special Elite', cursive;
+    font-size: 16px;
+    
+}
+
+span{
+    color: rgb(251, 255, 255);
+}
+nav a:hover{
+    background: rgb(255, 115, 0);
+    color: rgb(158, 2, 2);
+    
+}
+.dropdown-item,.dropdown-menu {
+ background: rgb(6, 8, 39);
+ font-family: 'Special Elite', cursive;
+}

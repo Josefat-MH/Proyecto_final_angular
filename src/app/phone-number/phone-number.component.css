@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+.card {
+    border: none;
+    padding: 20px;
+    background-image: url(https://i.pinimg.com/originals/c7/e2/9b/c7e29b857e6fa1762e2f0fd1a2671c89.jpg);
+    color: #fff
+  }
+  
+  .contain{
+  margin: 10rem 0 3rem 0;
+  }
+  h1{
+    font-family: 'Blaka', cursive;
+    color: rgb(179, 3, 26);
+  }
+  
+  .form-input {
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color:rgb(255, 255, 255);
+    font-family: 'Caveat', cursive;
+  }
+  
+  .form-control {
+    height: 50px;
+    background-color: #fc4c69;
+    text-indent: 24px;
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+    
+  }
+  
+  .form-control:focus {
+    background-color: #650e8d;
+    box-shadow: none;
+    color: #fff;
+    border-color: #e7a04f
+  }
+  
+  .signup {
+    height: 50px;
+    font-size: 14px
+  }
+
+ 

@@ -1,0 +1,104 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+
+body {
+  background: white;
+  font-family: 'Inter UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.page {
+  
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40px);
+  position: absolute;
+  place-content: center;
+  width: calc(100% - 40px);
+}
+
+.container {
+  display: flex;
+  height: 450px;
+  margin: 0 auto;
+  width: 640px;
+}
+
+.left {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR0sAbFiqrMfSvCd21DLyMKuT-ol1Gd9d3RA58d56ZhCnPcZbEULLt-9_ye7jEccOxExk&usqp=CAU);
+  height: calc(100% - 40px);
+  top: 30px;
+  position: relative;
+  width: 40%;
+  background-size: 100%;
+ 
+}
+
+
+.login {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 10px 40px 40px;
+  color: aliceblue;
+}
+.card-title {
+  font-family: 'Blaka', cursive;
+  color: rgb(255, 217, 0);
+  
+  line-height: 1.5;
+  text-align: center;
+  font-size: 40px;
+}
+.right {
+  background: #048be6;
+  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+  color: #F1F1F2;
+  position: relative;
+  width: 60%;
+}
+
+.form {
+  margin: 40px;
+  position: absolute;
+}
+label {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:  #f3f0f1;
+  display: block;
+  font-size: 16px;
+  height: 20px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+ input {
+    bottom: 30px;
+    border: none;
+    border-bottom: 5px solid #ff9100;
+    padding: 20px;
+    width: 100%;
+    background: transparent;
+    transition: all .25s ease;
+  }
+  
+input:focus {
+    outline: none;
+    border-bottom: 7px solid #0bb129;
+  }
+
+.sign-up-link{
+  color: rgb(85, 8, 8);
+}
+.C1{
+  float:right;
+  color: white;
+  background-color: rgb(151, 8, 8);
+}
+.card{
+  margin: 30px auto;
+  height:600px;
+}
+.img-fluid{
+  margin: 40px 20px;
+  height: 500px;
+}
